@@ -1,10 +1,11 @@
 import { getCustomRepository, getRepository } from 'typeorm';
-import AppError from '../errors/AppError';
 
-import TransactionsRepository from '../repositories/TransactionsRepository';
+import AppError from '@shared/errors/AppError';
 
-import Transaction from '../models/Transaction';
-import Category from '../models/Category';
+import Category from '@modules/categories/infra/typeorm/entities/Category';
+import TransactionsRepository from '../infra/typeorm/repositories/TransactionsRepository';
+
+import Transaction from '../infra/typeorm/entities/Transaction';
 
 interface Request {
   title: string;

@@ -2,10 +2,10 @@ import { getRepository, getCustomRepository, In } from 'typeorm';
 import csvParse from 'csv-parse';
 import fs from 'fs';
 
-import Transaction from '../models/Transaction';
-import Category from '../models/Category';
+import Category from '@modules/categories/infra/typeorm/entities/Category';
+import Transaction from '../infra/typeorm/entities/Transaction';
 
-import TransactionsRepository from '../repositories/TransactionsRepository';
+import TransactionsRepository from '../infra/typeorm/repositories/TransactionsRepository';
 
 interface CSVTransaction {
   title: string;
